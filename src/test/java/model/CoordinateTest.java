@@ -12,10 +12,13 @@ class CoordinateTest {
     void up() {
         Coordinate c1 = new Coordinate('c',2);
         Coordinate c2 = new Coordinate('c',3).up();
-        assertEquals(c1,c2);
-        assertEquals(new Coordinate('a',2),new Coordinate('A',3).up());
-        assertEquals(new Coordinate('a',2),new Coordinate('a',3).up());
-        assertEquals(new Coordinate('f',6),new Coordinate('F',7).up());
+        assertAll(
+        () -> assertEquals(c1,c2),
+        () -> assertEquals(new Coordinate('a',2),new Coordinate('a',3).up()),
+        () -> assertEquals(new Coordinate('a',2),new Coordinate('a',3).up()),
+        () -> assertEquals(new Coordinate('f',6),new Coordinate('F',7).up())
+                );
+
     }
 
     @Test

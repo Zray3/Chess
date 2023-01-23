@@ -1,6 +1,7 @@
 package model;
 
 import com.diogonunes.jcolor.Attribute;
+import static com.diogonunes.jcolor.Ansi.colorize;
 
 public class Cell {
     private Piece piece;
@@ -32,6 +33,14 @@ public class Cell {
     }
     public Coordinate getCoordinate() {
         return coordinate;
+    }
+    public void setPiece(Piece piece) {
+        this.piece = piece;
+    }
+
+    @Override
+    public String toString() {
+        return colorize("   ", color.getAttribute());
     }
 
     enum Color {

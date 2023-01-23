@@ -1,32 +1,32 @@
 package model;
 
 public class Coordinate {
-    private char letter;
-    private int number;
+    private char column;
+    private int row;
 
-    public Coordinate(char letter, int number) {
-        this.letter = Character.toUpperCase(letter);
-        this.number = number;
+    public Coordinate(char column, int row) {
+        this.column = Character.toUpperCase(column);
+        this.row = row;
     }
 
-    public char getLetter() {
-        return letter;
+    public char getColumn() {
+        return column;
     }
-    public int getNumber() {
-        return number;
+    public int getRow() {
+        return row;
     }
 
     public Coordinate up() {
-        return new Coordinate(letter, number - 1);
+        return new Coordinate(column, row - 1);
     }
     public Coordinate down() {
-        return new Coordinate(letter, number + 1);
+        return new Coordinate(column, row + 1);
     }
     public Coordinate left() {
-        return new Coordinate((char)(letter-1), number);
+        return new Coordinate((char)(column -1), row);
     }
     public Coordinate right() {
-        return new Coordinate((char)(letter+1), number);
+        return new Coordinate((char)(column +1), row);
     }
     public Coordinate diagonalUpLeft() {
         return up().left();
@@ -42,7 +42,7 @@ public class Coordinate {
     }
 @Override
     public String toString() {
-        return "(" + letter + "," + number + ")";
+        return "(" + column + "," + row + ")";
 }
 
 @Override
@@ -50,8 +50,8 @@ public class Coordinate {
         if(! (o instanceof Coordinate))
             return false;
         Coordinate c = (Coordinate) o;
-        return (c.getLetter() == this.letter)
-                && (c.getNumber() == this.number);
+        return (c.getColumn() == this.column)
+                && (c.getRow() == this.row);
     }
 
 }

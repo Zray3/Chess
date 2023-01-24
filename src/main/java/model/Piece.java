@@ -12,6 +12,18 @@ public abstract class Piece {
         this.type = type;
     }
 
+    public Cell getCell(){
+        return cell;
+    }
+
+    public Color getColor() {
+        return type.color;
+    }
+
+    public void putInYourPlace(){
+        cell.setPiece(this);
+    }
+
     public abstract Coordinate[] getNextMovements();
 
     @Override

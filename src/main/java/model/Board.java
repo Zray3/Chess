@@ -16,6 +16,28 @@ public class Board {
         }
     }
 
+    public void placePieces(){
+        Piece p;
+        p = new KnightWhite(getCell(new Coordinate('B',8)));
+        p.putInYourPlace();
+        p = new KnightWhite(getCell(new Coordinate('C',6)));
+        p.putInYourPlace();
+        p = new KnightBlack(getCell(new Coordinate('D',8)));
+        p.putInYourPlace();
+    }
+
+    public void highlight(Coordinate[] coordinates){
+        for(Coordinate c : coordinates)
+            getCell(c).highlight();
+    }
+
+    public void resetColors(){
+        for(Cell[] row : cells)
+            for(Cell c : row)
+                c.resetColor();
+    }
+
+
     public Cell getCell(Coordinate coordinate){
         if(coordinate.getRow()<1 || coordinate.getRow()>8)
             return null;

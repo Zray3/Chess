@@ -28,11 +28,11 @@ public abstract class Piece {
 
     @Override
     public String toString(){
-        return colorize(this.type.getShape(),this.type.getColor().getPieceColor());
+        return colorize(type.toString(),type.color.getPieceColor(),cell.getColor().getAttribute());
     }
 
     public enum Color{
-        WHITE(Attribute.TEXT_COLOR(250)),
+        WHITE(Attribute.TEXT_COLOR(255)),
         BLACK(Attribute.TEXT_COLOR(16));
         private final Attribute pieceColor;
         private Color(Attribute pieceColor){
@@ -70,6 +70,11 @@ public abstract class Piece {
         }
         public String getShape() {
             return shape;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(shape);
         }
 
     }

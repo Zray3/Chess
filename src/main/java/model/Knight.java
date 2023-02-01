@@ -42,17 +42,5 @@ public abstract class Knight extends Piece {
         return coordinates;
     }
 
-    public void check(Coordinate c){
-        Board board = getCell().getBoard();
-
-        if(board.getCell(c) != null){
-            if(board.getCell(c).isEmpty() ||
-                    board.getCell(c).getPiece().getColor() != getColor())
-                coordinates.add(c);
-        }
-
-
-    }
-
 
 }

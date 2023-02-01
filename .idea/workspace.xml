@@ -5,8 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a220e578-8d4a-4eb1-b77a-ce534cd46f65" name="Changes" comment="0.02">
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Bishop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/BishopBlack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/BishopWhite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/King.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/KingBlack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/KingWhite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Pawn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/PawnBlack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/PawnWhite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Queen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/QueenBlack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/QueenWhite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Rook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/RookBlack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/RookWhite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PruebaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PruebaMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Knight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Piece.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,16 +60,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "settings.editor.selected.configurable": "preferences.editor"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -135,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674588983595</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="0.02">
+      <created>1675279572565</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1675279572565</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

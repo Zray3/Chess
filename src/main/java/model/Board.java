@@ -1,5 +1,7 @@
 package model;
 
+import tad.ListCoor;
+
 import java.util.Arrays;
 
 public class Board {
@@ -26,8 +28,9 @@ public class Board {
         p.putInYourPlace();
     }
 
-    public void highlight(Coordinate[] coordinates){
-        for(Coordinate c : coordinates)
+    public void highlight(ListCoor coordinates){
+        Coordinate c;
+        while ((c = coordinates.remove(0)) != null)
             getCell(c).highlight();
     }
 

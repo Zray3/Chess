@@ -6,6 +6,7 @@ import tad.ListCoor;
 import static com.diogonunes.jcolor.Ansi.colorize;
 
 public abstract class Piece {
+    protected ListCoor coordinates;
     private Type type;
     private Cell cell;
 
@@ -27,6 +28,17 @@ public abstract class Piece {
     }
 
     public abstract ListCoor getNextMovements();
+
+    protected void check(Coordinate c) {
+        Board board = getCell().getBoard();
+
+        if (board.getCell(c) != null) {
+            if (board.getCell(c).isEmpty())
+                coordinates.add(c);
+            else if (board.getCell(c).getPiece().getColor() != getColor())
+                coordinates.add(c);
+        }
+    }
 
     @Override
     public String toString(){

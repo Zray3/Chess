@@ -1,6 +1,8 @@
 package model;
 
 import com.diogonunes.jcolor.Attribute;
+import tad.ListCoor;
+
 import static com.diogonunes.jcolor.Ansi.colorize;
 
 public abstract class Piece {
@@ -24,7 +26,7 @@ public abstract class Piece {
         cell.setPiece(this);
     }
 
-    public abstract Coordinate[] getNextMovements();
+    public abstract ListCoor getNextMovements();
 
     @Override
     public String toString(){

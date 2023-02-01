@@ -1,15 +1,17 @@
 package model;
 
+import tad.ListCoor;
+
 public abstract class Knight extends Piece {
-    private Coordinate[] coordinates;
+    private ListCoor coordinates;
 
     public Knight(Type type, Cell cell) {
         super(type, cell);
     }
 
     @Override
-    public Coordinate[] getNextMovements() {
-        coordinates = new Coordinate[0];
+    public ListCoor getNextMovements() {
+        coordinates = new ListCoor();
         Coordinate position = getCell().getCoordinate();
         Coordinate c;
 
@@ -46,7 +48,7 @@ public abstract class Knight extends Piece {
         if(board.getCell(c) != null){
             if(board.getCell(c).isEmpty() ||
                     board.getCell(c).getPiece().getColor() != getColor())
-                coordinates = Tool.add(coordinates, c);
+                coordinates.add(c);
         }
 
 

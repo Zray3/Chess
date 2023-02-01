@@ -15,5 +15,6 @@ public class PruebaMain {
         b1.resetColors();
         System.out.println(b1);
 
+
     }
 }

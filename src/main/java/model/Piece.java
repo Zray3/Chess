@@ -23,13 +23,15 @@ public abstract class Piece {
         return type.color;
     }
 
+    public Type getType(){return type;}
+
     public void putInYourPlace(){
         cell.setPiece(this);
     }
 
     public abstract ListCoor getNextMovements();
 
-    public void check(Coordinate coordinate, ListCoor coordinates){
+    protected void check(Coordinate coordinate, ListCoor coordinates){
         Board board = getCell().getBoard();
 
         if (board.getCell(coordinate) != null)

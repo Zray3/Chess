@@ -29,9 +29,10 @@ public class PawnWhite extends Pawn{
 
     }
 
-//    @Override
-//    public void transform() {
-//        new QueenWhite(getCell());
-//        cell=null;
-//    }
+    @Override
+    public void transform() {
+        new QueenWhite(getCell());
+        cell=null;
+    }
+
 }

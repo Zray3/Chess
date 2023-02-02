@@ -8,7 +8,7 @@ import static com.diogonunes.jcolor.Ansi.colorize;
 public abstract class Piece {
     protected ListCoor coordinates;
     private Type type;
-    private Cell cell;
+    protected Cell cell;
 
     public Piece(Type type, Cell cell) {
         this.cell = cell;
@@ -29,14 +29,23 @@ public abstract class Piece {
 
     public abstract ListCoor getNextMovements();
 
-    protected void check(Coordinate c) {
+    public void check(Coordinate coordinate, ListCoor coordinates){
         Board board = getCell().getBoard();
 
-        if (board.getCell(c) != null) {
-            if (board.getCell(c).isEmpty())
-                coordinates.add(c);
-            else if (board.getCell(c).getPiece().getColor() != getColor())
-                coordinates.add(c);
+        if (board.getCell(coordinate) != null)
+            if (board.getCell(coordinate).isEmpty() ||
+                    board.getCell(coordinate).getPiece().getColor() != getColor())
+                coordinates.add(coordinate);
+    }
+
+    public void moveTo(Coordinate c){
+        Board board = getCell().getBoard();
+        //Check whether cell exists
+        if(board.getCell(c) != null) {
+            getCell().setPiece(null);
+            Cell cell = board.getCell(c);
+            cell.setPiece(this);
+            this.cell = cell;
         }
     }
 

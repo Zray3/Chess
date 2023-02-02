@@ -9,26 +9,26 @@ import tad.ListCoor;
 
         @Override
         public ListCoor getNextMovements() {
-
+            ListCoor coordinates = new ListCoor();
             Coordinate position = getCell().getCoordinate();
             Coordinate c;
 
             c = position.up();
-            check(c);
+            check(c, coordinates);
             c = position.left();
-            check(c);
+            check(c, coordinates);
             c = position.down();
-            check(c);
+            check(c, coordinates);
             c = position.right();
-            check(c);
+            check(c, coordinates);
             c = position.diagonalDownLeft();
-            check(c);
+            check(c, coordinates);
             c = position.diagonalDownRight();
-            check(c);
+            check(c, coordinates);
             c = position.diagonalUpLeft();
-            check(c);
+            check(c, coordinates);
             c = position.diagonalUpRight();
-            check(c);
+            check(c, coordinates);
 
             return coordinates;
 

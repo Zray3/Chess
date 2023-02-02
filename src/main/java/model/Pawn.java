@@ -5,7 +5,15 @@ public abstract class Pawn extends Piece {
         super(type, cell);
     }
 
-//    public abstract void transform();
+    public abstract void transform();
+
+    @Override
+    public void moveTo(Coordinate c) {
+        super.moveTo(c);
+        if (getCell().getCoordinate().getRow() == 8 ||
+                getCell().getCoordinate().getRow() == 1)
+            transform();
+    }
 
     protected void checkPawnKiller(Coordinate c) {
         Board board = getCell().getBoard();

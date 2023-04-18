@@ -1,6 +1,7 @@
 package model;
 
-import tad.ListCoor;
+import java.util.HashSet;
+import java.util.Set;
 
 public class PawnBlack extends Pawn {
     public PawnBlack(Cell cell){
@@ -8,8 +9,8 @@ public class PawnBlack extends Pawn {
     }
 
     @Override
-    public ListCoor getNextMovements() {
-        coordinates = new ListCoor();
+    public Set<Coordinate> getNextMovements() {
+        coordinates = new HashSet<>();
         Coordinate position = getCell().getCoordinate();
         Coordinate c;
 

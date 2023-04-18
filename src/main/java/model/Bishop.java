@@ -1,6 +1,7 @@
 package model;
 
-import tad.ListCoor;
+import java.util.HashSet;
+import java.util.Set;
 
 public abstract class Bishop extends Piece{
     public Bishop(Type type, Cell cell){
@@ -8,12 +9,12 @@ public abstract class Bishop extends Piece{
     }
 
     @Override
-    public ListCoor getNextMovements(){
+    public Set<Coordinate> getNextMovements(){
         return Bishop.getNextMovementsAsBishop(this);
     }
 
-    public static ListCoor getNextMovementsAsBishop(Piece p){
-        ListCoor coordinates = new ListCoor();
+    public static Set<Coordinate> getNextMovementsAsBishop(Piece p){
+        Set<Coordinate> coordinates = new HashSet<>();
         Cell cell = p.getCell();
         Board board = cell.getBoard();
         Piece.Color color = p.getColor();

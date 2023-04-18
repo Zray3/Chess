@@ -1,6 +1,7 @@
 package model;
 
-import tad.ListCoor;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Queen extends Piece {
     public Queen(Type type, Cell cell){
@@ -8,10 +9,11 @@ public class Queen extends Piece {
     }
 
     @Override
-    public ListCoor getNextMovements() {
-        return
-                Bishop.getNextMovementsAsBishop(this).
-                        addAll(Rook.getNextMovementsAsRook(this));
+    public Set<Coordinate> getNextMovements() {
+        Set<Coordinate> aux = new HashSet<>(Bishop.getNextMovementsAsBishop(this));
+        aux.addAll(Rook.getNextMovementsAsRook(this));
+        return aux;
+
     }
 
 

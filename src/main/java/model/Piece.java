@@ -1,12 +1,13 @@
 package model;
 
 import com.diogonunes.jcolor.Attribute;
-import tad.ListCoor;
+
+import java.util.Set;
 
 import static com.diogonunes.jcolor.Ansi.colorize;
 
 public abstract class Piece {
-    protected ListCoor coordinates;
+    protected Set<Coordinate> coordinates;
     private Type type;
     protected Cell cell;
 
@@ -29,9 +30,9 @@ public abstract class Piece {
         cell.setPiece(this);
     }
 
-    public abstract ListCoor getNextMovements();
+    public abstract Set<Coordinate> getNextMovements();
 
-    protected void check(Coordinate coordinate, ListCoor coordinates){
+    protected void check(Coordinate coordinate, Set<Coordinate> coordinates){
         Board board = getCell().getBoard();
 
         if (board.getCell(coordinate) != null)
@@ -48,6 +49,17 @@ public abstract class Piece {
             Cell cell = board.getCell(c);
             cell.setPiece(this);
             this.cell = cell;
+        }
+       boolean king=false;
+        Cell aux = null;
+        for (Coordinate i:
+             board.getCell(c).getPiece().getNextMovements()) {
+            if (board.getCell(i).isEmpty()!=true){
+                if (board.getCell(i).getPiece().equals(Type.BLACK_KING)||board.getCell(i).getPiece().equals(Type.WHITE_KING)){
+                    System.out.println("JAQUE, CUIDADO, PODRÍA SER TU ÚLTIMA OPORTUNIDAD");
+                }
+            }
+
         }
     }
 

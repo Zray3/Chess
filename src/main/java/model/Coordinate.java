@@ -1,8 +1,8 @@
 package model;
 
 public class Coordinate {
-    private char column;
-    private int row;
+    private final char column;
+    private final int row;
 
     public Coordinate(char column, int row) {
         this.column = Character.toUpperCase(column);
@@ -40,18 +40,22 @@ public class Coordinate {
     public Coordinate diagonalDownRight() {
         return down().right();
     }
-@Override
+    @Override
     public String toString() {
         return "(" + column + "," + row + ")";
 }
 
-@Override
+    @Override
     public boolean equals(Object o) {
         if(! (o instanceof Coordinate))
             return false;
         Coordinate c = (Coordinate) o;
         return (c.getColumn() == this.column)
                 && (c.getRow() == this.row);
+    }
+    @Override
+    public  int hashCode(){
+        return row;
     }
 
 }

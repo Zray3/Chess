@@ -1,6 +1,7 @@
 package model;
 
-import tad.ListCoor;
+import java.util.HashSet;
+import java.util.Set;
 
 public abstract class Rook extends Piece{
 
@@ -9,12 +10,12 @@ public abstract class Rook extends Piece{
     }
 
     @Override
-    public ListCoor getNextMovements() {
+    public Set<Coordinate> getNextMovements() {
         return Rook.getNextMovementsAsRook(this);
     }
 
-    public static ListCoor getNextMovementsAsRook(Piece p){
-        ListCoor coordinates = new ListCoor();
+    public static Set<Coordinate> getNextMovementsAsRook(Piece p){
+        Set<Coordinate> coordinates = new HashSet<>();
         Cell cell = p.getCell();
         Board board = cell.getBoard();
         Piece.Color color = p.getColor();

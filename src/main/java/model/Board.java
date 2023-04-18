@@ -1,41 +1,37 @@
 package model;
 
-import tad.ListCoor;
 
-import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 public class Board {
 
-    private Cell[][] cells;
+    private final Map<Coordinate,Cell> cells;
     private IDeletedPieceManager deletedPieceManager;
 
     public Board(){
 
         deletedPieceManager = new DeletedPieceManager();
 
-        cells = new Cell[8][8];
+        cells = new HashMap<>();
         //to create every cell
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
-                cells[i][j] = new Cell(this, new Coordinate((char)('A'+j),i+1));
+                cells.put(new Coordinate((char)('A'+j),i+1),new Cell(this, new Coordinate((char)('A'+j),i+1)));
             }
         }
     }
 
-    public void highlight(ListCoor coordinates){
-//        Coordinate c;
-//        while ((c = coordinates.remove(0)) != null)
-//            getCell(c).highlight();
-
-        for (int i = 0; i < coordinates.size(); i++) {
-            getCell(coordinates.get(i)).highlight();
+    public void highlight(Set<Coordinate> coordinates){
+        for (Coordinate c: coordinates) {
+            getCell(c).highlight();
         }
     }
 
     public void resetColors(){
-        for(Cell[] row : cells)
-            for(Cell c : row)
-                c.resetColor();
+        for(Cell c: cells.values())
+            c.resetColor();
     }
 
 
@@ -44,7 +40,7 @@ public class Board {
             return null;
         if(coordinate.getColumn()<'A' || coordinate.getColumn()>'H')
             return null;
-        return cells[coordinate.getRow()-1][coordinate.getColumn()-'A'];
+        return cells.get(coordinate);
     }
 
     public void startPieces(){
@@ -96,20 +92,20 @@ public class Board {
 
     @Override
     public String toString() {
-        String output = "   A  B  C  D  E  F  G  H\n";
+        StringBuilder output = new StringBuilder("   A  B  C  D  E  F  G  H\n");
         for (int i = 0; i < 8; i++) {
-            output += (i+1) + " ";
+            output.append(i + 1).append(" ");
             for (int j = 0; j < 8; j++) {
-                output += cells[i][j];
+                output.append(cells.get(new Coordinate((char) ('a' + j), i + 1)));
             }
-            output += " " + (i+1) + "\n";
+            output.append(" ").append(i + 1).append("\n");
         }
 
-        output += "   A  B  C  D  E  F  G  H";
+        output.append("   A  B  C  D  E  F  G  H");
 
-        output +="\n\n"+deletedPieceManager.toString();
+        output.append("\n    PIEZAS ELIMINADAS\n").append(deletedPieceManager.toString());
 
-        return output;
+        return output.toString();
     }
 
     public void testPlacePawn(){

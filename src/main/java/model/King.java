@@ -1,15 +1,17 @@
 package model;
-import tad.ListCoor;
 
-    public abstract class King extends Piece{
+import java.util.HashSet;
+import java.util.Set;
+
+public abstract class King extends Piece{
 
         public King(Type type, Cell cell) {
             super(type, cell);
         }
 
         @Override
-        public ListCoor getNextMovements() {
-            ListCoor coordinates = new ListCoor();
+        public Set<Coordinate> getNextMovements() {
+            Set<Coordinate> coordinates = new HashSet<>();
             Coordinate position = getCell().getCoordinate();
             Coordinate c;
 

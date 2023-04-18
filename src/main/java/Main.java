@@ -4,7 +4,7 @@ import java.util.Set;
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class PruebaMain {
+public class Main {
 
     public static void main(String[] args) {
         Board b = new Board();

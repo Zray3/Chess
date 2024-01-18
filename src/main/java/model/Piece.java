@@ -63,6 +63,7 @@ public abstract class Piece {
         }
     }
 
+
     @Override
     public String toString(){
         return colorize(type.toString(),type.color.getPieceColor(),cell.getColor().getAttribute());

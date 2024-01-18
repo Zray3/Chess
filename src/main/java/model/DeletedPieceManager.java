@@ -40,12 +40,14 @@ public class DeletedPieceManager implements IDeletedPieceManager{
 
         output.append("\n");
 
+
+
+        output.append("    PIEZAS VIVAS \n");
+
         for (Piece.Type type : Piece.Type.values())
             output.append(colorize(" " + type.getShape() + " ", type.getColor().getPieceColor(), Cell.Color.BLACK_CELL.getAttribute()));
+        output.append("\n");
 
-        output.append("\n");
-        System.out.println("PIEZAS VIVAS");
-        output.append("\n");
         int aux;
         for (Piece.Type type : Piece.Type.values()){
             aux=0;
@@ -57,6 +59,8 @@ public class DeletedPieceManager implements IDeletedPieceManager{
                 aux=2;
             }
         output.append(colorize(" " + (aux-count(type)) + " ", type.getColor().getPieceColor(), Cell.Color.WHITE_CELL.getAttribute()));}
+        output.append("\n");
+        output.append("\n");
 
         return output.toString();
 

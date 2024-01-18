@@ -13,9 +13,7 @@ public class Main {
         Coordinate pick;
         Coordinate place;
         Set <Coordinate> highlighting;
-        System.out.println(b);
 
-        System.out.println(b);
 
         while (true) {
             System.out.println(b);
@@ -63,7 +61,7 @@ public class Main {
         System.out.println("Introduzca la posición:");
         String scaner = sc.nextLine().toUpperCase();
         System.out.println(scaner);
-        if (scaner.length()<2) {
+        if (scaner.length()!=2) {
             System.out.println("Coordenada no válida, introduzca una coordenada compuesta por 1 comlumna y 1 fila:");
             return PideCoord();
         }
@@ -72,13 +70,13 @@ public class Main {
         System.out.println("Columna inadecuada");
         return PideCoord();
         }
-        String aux = String.valueOf(scaner.charAt(1));
-        Integer aux2 = Integer.parseInt(aux);
-
-        if (aux2<1||aux2>8){
+        if (scaner.charAt(1)<'0'||scaner.charAt(1)>'8'){
             System.out.println("Fila inadecuada");
             return PideCoord();
         }
+        String aux = String.valueOf(scaner.charAt(1));
+
+        Integer aux2 = Integer.parseInt(aux);
 
         System.out.println(scaner.charAt(0)+" "+aux2);
         return new Coordinate(scaner.charAt(0),aux2);

@@ -56,7 +56,7 @@ public abstract class Piece {
     }
 
     public void jaqueMate(Board board, Coordinate rey){
-        board
+
     }
 
     public boolean jaque(Coordinate c, Board board){

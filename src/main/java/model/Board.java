@@ -108,69 +108,6 @@ public class Board {
         return output.toString();
     }
 
-    public void testPlacePawn(){
-        Piece p;
-        p = new PawnWhite(getCell(new Coordinate('B',6)));
-        p.putInYourPlace();
-        p = new PawnWhite(getCell(new Coordinate('C',7)));
-        p.putInYourPlace();
-        p = new PawnBlack(getCell(new Coordinate('D',6)));
-        p.putInYourPlace();
-    }
 
-    public void testPlaceBishop(){
-        Piece p;
-        p = new BishopWhite(getCell(new Coordinate('D',6)));
-        p.putInYourPlace();
-        p = new BishopWhite(getCell(new Coordinate('F',4)));
-        p.putInYourPlace();
-        p = new BishopBlack(getCell(new Coordinate('B',4)));
-        p.putInYourPlace();
-    }
-
-    public void testPlaceRook(){
-        Piece p;
-        p = new RookWhite(getCell(new Coordinate('D',6)));
-        p.putInYourPlace();
-        p = new RookWhite(getCell(new Coordinate('A',6)));
-        p.putInYourPlace();
-        p = new RookBlack(getCell(new Coordinate('H',6)));
-        p.putInYourPlace();
-    }
-
-    public void testPlaceQueen(){
-        Piece p;
-        p = new QueenWhite(getCell(new Coordinate('D',6)));
-        p.putInYourPlace();
-        p = new RookWhite(getCell(new Coordinate('A',6)));
-        p.putInYourPlace();
-        p = new RookBlack(getCell(new Coordinate('H',6)));
-        p.putInYourPlace();
-        p = new BishopWhite(getCell(new Coordinate('F',4)));
-        p.putInYourPlace();
-        p = new BishopBlack(getCell(new Coordinate('B',4)));
-        p.putInYourPlace();
-    }
-
-    public void testPlaceKing(){
-        Piece p;
-        p = new KingWhite(getCell(new Coordinate('D',6)));
-        p.putInYourPlace();
-        p = new RookWhite(getCell(new Coordinate('E',6)));
-        p.putInYourPlace();
-        p = new RookBlack(getCell(new Coordinate('C',6)));
-        p.putInYourPlace();
-    }
-
-
-    public void testPlaceKnight(){
-        Piece p;
-        p = new KnightWhite(getCell(new Coordinate('D',6)));
-        p.putInYourPlace();
-        p = new KnightWhite(getCell(new Coordinate('F',7)));
-        p.putInYourPlace();
-        p = new KnightBlack(getCell(new Coordinate('B',7)));
-        p.putInYourPlace();
-    }
 
 }

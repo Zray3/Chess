@@ -50,17 +50,30 @@ public abstract class Piece {
             cell.setPiece(this);
             this.cell = cell;
         }
-       boolean king=false;
-        Cell aux = null;
-        for (Coordinate i:
-             board.getCell(c).getPiece().getNextMovements()) {
-            if (board.getCell(i).isEmpty()!=true){
-                if (board.getCell(i).getPiece().equals(Type.BLACK_KING)||board.getCell(i).getPiece().equals(Type.WHITE_KING)){
-                    System.out.println("JAQUE, CUIDADO, PODRÍA SER TU ÚLTIMA OPORTUNIDAD");
-                }
-            }
 
+        jaque(c,board);
+
+    }
+
+    public void jaqueMate(Board board, Coordinate rey){
+
+    }
+
+    public boolean jaque(Coordinate c, Board board){
+        for (Coordinate coord : board.getCell(c).getPiece().getNextMovements()) {
+            Cell aux = board.getCell(coord);
+            if (!(aux.isEmpty())){
+                if (board.getCell(c).getPiece().getColor()==Color.WHITE &&aux.getPiece().getType()==Type.BLACK_KING){
+                    System.out.println("BANDO NEGRO EN JAQUE, CUIDADO!");
+                    return true;
+                }else if (aux.getPiece().getType()==Type.WHITE_KING){
+                    System.out.println("bANDO BLANCO EN JAQUE, CUUIDADO!");
+                    return true;
+                }
+
+            }
         }
+        return false;
     }
 
 

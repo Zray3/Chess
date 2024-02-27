@@ -45,11 +45,16 @@ public abstract class Piece {
         Board board = getCell().getBoard();
         //Check whether cell exists
         if(board.getCell(c) != null) {
+            if (!(board.getCell(c).isEmpty())) {
+                board.getDeletedPieceManager().addPiece(board.getCell(c).getPiece());
+            }
             getCell().setPiece(null);
             Cell cell = board.getCell(c);
             cell.setPiece(this);
+
             this.cell = cell;
         }
+
 
         jaque(c,board);
 

@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a220e578-8d4a-4eb1-b77a-ce534cd46f65" name="Changes" comment="Jaque solucionado" />
+    <list default="true" id="a220e578-8d4a-4eb1-b77a-ce534cd46f65" name="Changes" comment="Jaque solucionado">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/DeletedPieceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/DeletedPieceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Piece.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,6 +69,19 @@
       <recent name="model" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -73,6 +91,8 @@
       <option name="presentableId" value="Default" />
       <updated>1673289664289</updated>
       <workItem from="1705592947252" duration="3322000" />
+      <workItem from="1709054560622" duration="68000" />
+      <workItem from="1709056023326" duration="3829000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1673378169188</created>
@@ -220,6 +240,16 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/model/Piece.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/model/DeletedPieceManager.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

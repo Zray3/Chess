@@ -18,7 +18,7 @@ public class DeletedPieceManager implements IDeletedPieceManager{
     public int count(Piece.Type type){
         int num = 0;
         for (Piece piece : pieces) {
-            if ((piece.getCell().getPiece().getType() == type)) num++;
+            if ((piece.getType() == type)) num++;
         }
         return num;
     }

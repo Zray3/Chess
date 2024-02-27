@@ -23,6 +23,11 @@ public class Board {
         }
     }
 
+
+    public IDeletedPieceManager getDeletedPieceManager() {
+        return deletedPieceManager;
+    }
+
     public void highlight(Set<Coordinate> coordinates){
         for (Coordinate c: coordinates) {
             getCell(c).highlight();

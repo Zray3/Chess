@@ -43,6 +43,7 @@ public abstract class Piece {
 
     public void moveTo(Coordinate c){
         Board board = getCell().getBoard();
+        Coordinate aux = getCell().getCoordinate();
         //Check whether cell exists
         if(board.getCell(c) != null) {
             if (!(board.getCell(c).isEmpty())) {
@@ -53,10 +54,19 @@ public abstract class Piece {
             cell.setPiece(this);
 
             this.cell = cell;
+
+            if (!aux.equals(c)) {
+                if (cell.getPiece() instanceof King) {
+                    ((King) cell.getPiece()).move();
+                } else if (cell.getPiece() instanceof Rook) {
+                    ((Rook) cell.getPiece()).move();
+                }
+            }
+            jaque(c,board);
         }
 
 
-        jaque(c,board);
+
 
     }
 

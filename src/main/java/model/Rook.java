@@ -5,8 +5,14 @@ import java.util.Set;
 
 public abstract class Rook extends Piece{
 
+    private boolean moved;
     public Rook(Type type, Cell cell) {
         super(type, cell);
+        this.moved=false;
+    }
+
+    public void move(){
+        this.moved=true;
     }
 
     @Override

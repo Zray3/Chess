@@ -5,9 +5,18 @@ import java.util.Set;
 
 public abstract class King extends Piece{
 
+        private boolean moved;
         public King(Type type, Cell cell) {
+
             super(type, cell);
+            this.moved = false;
         }
+
+        public void move(){
+            moved=true;
+        }
+
+
 
         @Override
         public Set<Coordinate> getNextMovements() {
